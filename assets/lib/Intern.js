@@ -1,4 +1,7 @@
 // TODO: Write code to define and export the Intern class.  HINT: This class should inherit from Employee.
+
+// Import the Employee class
+const { Employee } = require("./Employee");
 // Intern class
 class Intern extends Employee {
     constructor(name, id, email, school) {
