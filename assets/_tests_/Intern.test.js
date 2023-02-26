@@ -1,4 +1,5 @@
-const Intern = require("../lib/Intern");
+// destructure the Intern property from the module.exports object that is being imported
+const {Intern} = require("../lib/Intern");
 
 test("Can set school via constructor", () => {
   const testValue = "UCLA";

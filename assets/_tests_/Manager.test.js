@@ -1,4 +1,5 @@
-const Manager = require("../lib/Manager");
+// destructure the Manager property from the module.exports object that is being imported
+const {Manager} = require("../lib/Manager");
 const Employee = require("../lib/Employee");
 
 test("Can set office number via constructor argument", () => {

@@ -1,4 +1,5 @@
-const Employee = require("../lib/Employee");
+// destructure the Employee property from the module.exports object that is being imported
+const {Employee} = require("../lib/Employee");
 
 test("Can instantiate Employee instance", () => {
   const e = new Employee();
