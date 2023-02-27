@@ -98,4 +98,37 @@ function promptEngineer() {
   
       promptNextAction();
     })
-  }; // end of function  
+  }; // end of function
+  
+  // Function to prompt user for intern's information
+function promptIntern() {
+    return inquirer.prompt([
+      {
+        type: 'input',
+        name: 'name',
+        message: "What is the intern's name?",
+      },
+      {
+        type: 'input',
+        name: 'id',
+        message: "What is the intern's employee ID?",
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: "What is the intern's email address?",
+      },
+      {
+        type: 'input',
+        name: 'school',
+        message: "What is the intern's school?",
+      },
+    ]).then(function(answer) {
+      let intern = new Intern(answer.name, answer.id, answer.email, answer.school)
+      employees.push(intern);
+  
+      promptNextAction()
+    })
+  }; // end of function 
+
+  
