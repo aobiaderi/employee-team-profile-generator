@@ -49,3 +49,24 @@ function promptManager() {
     })
 }; // end of function 
 promptManager(); // Call promptManager function to start the program
+
+// Function to prompt user for next action
+function promptNextAction() {
+    return inquirer.prompt([
+      {
+        type: 'list',
+        name: 'action',
+        message: 'What would you like to do next?',
+        choices: ['Add an engineer', 'Add an intern', 'Finish building the team'],
+      },
+    ]).then(val => {
+       if (val.action === "Add an engineer") {
+        promptEngineer()
+      } else if (val.action === "Add an intern") {
+        promptIntern();
+      } else if (val.action === "Finish building the team") {
+        generateHTML(outputPath, render(employees));
+      };
+    }); 
+  }; // end of function 
+  
