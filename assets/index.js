@@ -69,4 +69,33 @@ function promptNextAction() {
       };
     }); 
   }; // end of function 
+// Function to prompt user for engineer's information
+function promptEngineer() {
+    return inquirer.prompt([
+      {
+        type: 'input',
+        name: 'name',
+        message: "What is the engineer's name?",
+      },
+      {
+        type: 'input',
+        name: 'id',
+        message: "What is the engineer's employee ID?",
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: "What is the engineer's email address?",
+      },
+      {
+        type: 'input',
+        name: 'github',
+        message: "What is the engineer's GitHub username?",
+      },
+    ]).then(function(answer) {
+      let engineer = new Engineer(answer.name, answer.id, answer.email, answer.github)
+      employees.push(engineer);
   
+      promptNextAction();
+    })
+  }; // end of function  
