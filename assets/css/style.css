@@ -1,10 +1,7 @@
-.team-area .employee-card:nth-last-child(-n+2) {
-    order: 1;
-    
-  }
   .team-area {
     display: flex;
     flex-wrap: wrap;
-    padding-right: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px
   }
   
